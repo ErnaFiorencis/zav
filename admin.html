@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Pangolin', cursive;
+        }
+    </style>
+</head>
+<body>
+    <div class="home-container">
+		<img src="./img/rabbit.png" alt="" class="icon">
+		<a href="admin.html" class="" style="margin-right: 20px;">Dodaj novo pitanje</a>
+        <a href="admin2.html" class="" style="margin-right: 20px;">Dodaj novi predmet </a>
+        <a href="admin2.html" class="" style="margin-right: 20px;">Dodaj novu temu </a>
+        <a href="admin3.html" class="" style="margin-right: 20px;">Prati napredak učenika</a>
+        <button id="logout">LOGOUT</button>
+	</div>
+    <hr>
+    <div id="pitanja">
+        <h1 class="naslov">Dodaj novo pitanje</h1>
+        <form id="questions">
+            <label for="question">Tekst Pitanja</label>
+            <input type="text" id="question" name="question" required>
+            <label for="type">Tip pitanja:</label>
+            <select id="type" name="level" required>
+                <option value="1">ABCD pitalica</option>
+                <option value="2">Točno Netočno</option>
+                <option value="3">Slobodni unos</option>
+            </select>
+            <label id="answers"for="answers">Ponuđeni odgovori</label>
+            <div class="answers">
+                <input type="text" id="a">
+                <input type="text" id="b">
+                <input type="text" id="c">
+                <input type="text" id="d">
+                <label for="answer">točan odgovor</label>
+                <input type="text" id="answer" required>
+            </div>
+            <div>
+                <label for="level">Težina:</label>
+                <select id="level" name="level" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <label for="level">Razred:</label>
+                <select id="grade" name="level" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <label for="category">Kategorija:</label>
+                <select id="categorySelect" name="category" required>
+                </select>
+                <label for="place">Lokacija:</label>
+                <select id="placeSelect" name="place" required>
+
+                </select>
+                
+            </div>
+            <button type="submit" id="addQuestion" style="margin-top: 10px;">DODAJ PITANJE</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script src="admin.js"></script>

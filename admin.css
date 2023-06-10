@@ -1,0 +1,47 @@
+body {
+
+	background-color: rgb(25, 31, 39);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+    align-items: center;
+}
+
+input {
+    width: 80%;
+    height: 7vh;
+    margin-bottom: 20px;
+    margin-top: 7px;
+}
+
+body{
+    background-color: rgb(25, 31, 39);
+}
+
+.answers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.home-container{
+display: flex;
+align-items: center;
+}
+
+.icon{
+width: 40px;
+height: auto;
+}
+h1{
+margin: 20px;
+color: rgb(192,212,112);
+}
+
+a, h2, p, label, h3{
+color:  rgb(155,212,195);
+}
+select{
+margin: 10px;
+}

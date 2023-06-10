@@ -1,0 +1,43 @@
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .podium {
+    display: flex;
+    justify-content: space-between;
+    width: 700px; /* Adjust the width as needed */
+  }
+  
+  .place {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 5px;
+  }
+  
+  .first {
+    background-color: gold;
+  }
+  
+  .second {
+    background-color: silver;
+  }
+  
+  .third {
+    background-color: #cd7f32; /* Bronze color */
+  }
+  
+  .remaining-places {
+    margin-top: 20px; /* Adjust the margin as needed */
+  }
+  
+  h1{
+          margin: 20px;
+          color: rgb(192,212,112);
+          text-align: center;
+      }
+      span{
+          margin-right: 10px;
+      }

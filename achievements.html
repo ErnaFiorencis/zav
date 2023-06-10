@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="achievements.css">
+<style>
+    body{
+        font-family: 'Pangolin', cursive;
+    }
+</style>
+</head>
+<body style="background-color: rgb(25, 31, 39); ">
+    <div class="home-container">
+		<img src="./img/rabbit.png" alt="" class="icon">
+		<a href="home.html" class="home" style="margin-right: 20px;">POČETNA STRANICA</a>
+        <a href="index.html" class="home">NAZAD U IGRU</a>
+	</div>
+    <hr>
+    <h1>Prati svoje uspjehe i napredak!</h1>
+    <h2 id="user">user: </h2>
+    <h2 id="points">bodovi: </h2>
+    <h2 id="level">level: </h2>
+    <hr>
+    <h1>Postignuća: </h1>
+    <div id="achContainer" style="display: grid; grid-template-columns: repeat(6, 1fr);">
+    </div>
+</body>
+</html>
+<script src="achievements.js"></script>

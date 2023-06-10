@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Pangolin', cursive;
+        }
+        p {
+            display: inline; 
+            font-size: 1.1rem;         
+            margin: 20px;
+            color: rgb(192,212,112);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="home-container">
+		<img src="./img/rabbit.png" alt="" class="icon">
+		<a href="admin.html" class="" style="margin-right: 20px;">Dodaj novo pitanje</a>
+        <a href="admin2.html" class="" style="margin-right: 20px;">Dodaj novi predmet </a>
+        <a href="admin2.html" class="" style="margin-right: 20px;">Dodaj novu temu </a>
+        <a href="admin3.html" class="" style="margin-right: 20px;">Prati napredak učenika</a>
+        <button id="logout">LOGOUT</button>
+	</div>
+    <hr>
+        <h1 class="naslov">Potraži informacije o korisniku: </h1>
+        <form id="findStudent">
+            <label for="user">Upisi korisničko ima ili email-adresu: </label>
+            <input type="text" id="user" name="category" required>
+            <input type="submit" id="findStudent" value="Predaj">
+        </form>
+        <hr>
+        <div style="margin: 25px;">
+            <div id="users">
+                <!-- 
+                <div id="user">
+                <h3 style="display: inline; margin-bottom: 20px
+                ;">Korisničko ime: </h3> <p style="display: inline; font-size: 1.1rem;">erna123</p>
+                <br>
+                <h3 style="display: inline
+                ;">Email adresa: </h3> <p style="display: inline; font-size: 1.1rem;">erna.fiorencis@gmail.com</p>
+                <br>
+                <h3 style="display: inline
+                ;">Bodovi: </h3> <p style="display: inline; font-size: 1.1rem;">72</p>
+                <br>
+                <h3 style="display: inline
+                ;">Level: </h3> <p style="display: inline; font-size: 1.1rem;">1</p>
+                <br>
+                <h3 style="display: inline
+                ;">Postignuća: </h3> <p style="display: inline; font-size: 1.1rem;">Dodavač brojeva</p>
+                </div>  --> 
+            </div>
+        </div>
+</body>
+</html>
+<script src="admin3.js"></script>

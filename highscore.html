@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+  <link rel="stylesheet" type="text/css" href="highscore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Pangolin', cursive;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+	<div class="home-container">
+		<img src="./img/rabbit.png" alt="" class="icon">
+		<a href="home.html" class="home">POČETNA STRANICA</a>
+	</div>
+    <h1>TRENUTNI POREDAK BODOVA: </h1>
+    <HR></HR>
+    <div class="leaderboard">
+        <div class="podium">
+          <div class="place first">
+            <span class="position">1. </span>
+            <span id="firstUser" class="user">user </span>
+            <span id="firstPoints"class="points">1000</span>
+          </div>
+          <div class="place second">
+            <span class="position">2.</span>
+            <span id="sUser" class="user">user </span>
+            <span id="sPoints"class="points">1000</span>
+          </div>
+          <div class="place third">
+            <span class="position">3.</span>
+            <span id="tUser" class="user">user </span>
+            <span id="tPoints"class="points">1000</span>
+          </div>
+        </div>
+  
+        <div class="remaining-places" id="rp">
+
+          <!-- Add more places as needed -->
+        </div>
+      </div>
+      
+      
+</body>
+</html>
+
+<script src="score.js"></script>

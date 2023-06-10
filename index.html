@@ -1,0 +1,274 @@
+<head>
+
+    <script src="https://kit.fontawesome.com/b6d6b12852.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<style>
+    body{
+        font-family: 'Pangolin', cursive;
+        background-color: black;
+    }
+
+    *{
+        font-family: 'Pangolin', cursive;
+    }
+</style>
+</head>
+<div style="display: inline-block; position: relative;">
+    <div style="background-color: black; position: absolute; top: 0; bottom: 0; right: 0; left: 0; opacity: 0; pointer-events: none;"></div>
+    <div id="sideBarDisplay"style="display: flex;">
+    <canvas id="canvas"> </canvas>
+
+    <div class="dialogContainer" id="dialogContainer" style=" 
+    display: none;
+    position: absolute;
+    bottom: 2%;
+    left: 30%;
+    text-align: center;">
+        <img class="top-right" src="./img/x.png" id="exitDialog" style="display: block">
+        <img src="./img/dialog/box6.png" id="dialogImage" style="width:100%;">
+        <div class="centered" id="dialogText"></div>
+    </div>
+
+    <div id="up" style="    
+        padding: 20px;
+        background-color: black;
+        color: rgb(155,212,195);
+        border: white solid 2px;
+        align-items: center;
+        display: none;
+        justify-content: center;
+        border-radius: 90px;
+        position: absolute;
+        bottom: 150;
+        right: 15;
+        height: 80;
+        width: 65;"
+    ><i style="align-self: center;"class="fa-solid fa-arrow-up fa-2xl"></i></div> 
+    <div id="right" style="
+        padding: 20px;    
+        color: rgb(155,212,195);
+        background-color: black;
+        border: white solid 2px;
+        align-items: center;
+        display: none;
+        justify-content: center;
+        border-radius: 90px;
+        position: absolute;
+        bottom: 40;
+        right: 75;
+        height: 80;
+        width: 65;"
+    ><i style="align-self: center;"class="fa-solid fa-arrow-up fa-rotate-90 fa-2xl"></i></div>
+    <div id="down"style="
+        padding: 20px;        
+        color: rgb(155,212,195);
+        border: white solid 2px;
+        align-items: center;
+        display: none;
+        justify-content: center;
+        border-radius: 90px;
+        background-color: black;
+        position: absolute;
+        bottom: 40;
+        left: 75;
+        height: 80;
+        width: 65;"
+    ><i style="align-self: center;"class="fa-solid fa-arrow-up fa-rotate-180 fa-2xl"></i></div>
+    <div  id= "left"style="
+        padding: 20px;    
+        color: rgb(155,212,195);
+        border: white solid 2px;
+        align-items: center;
+        display: none;
+        justify-content: center;
+        border-radius: 90px;
+        background-color: black;
+        position: absolute;
+        bottom: 150;
+        left: 15;
+        height: 80;
+        width: 65;"
+    ><i style="align-self: center;"class="fa-solid fa-arrow-up fa-rotate-270 fa-2xl"></i></div>
+
+    
+    <img src="./img/home.png" id="homeicon" style="position: absolute; right: 10;"alt="">
+    <img src="./img/set.png" id="seticon" style="position: absolute; right: 85;"alt="">
+    <img src="./img/info.png" id="infoicon" style="position: absolute; right: 160;"alt="">
+    <img src="./img/soundON.png" id="soundicon" style="position: absolute; right: 235;"alt="">
+
+    <div id="sideBar" style="
+        background-color: rgb(207, 173, 132);
+        position: absolute;
+        top: 80;
+        right: 20;
+        width: 32%;
+        padding: 10;
+        border:  solid 2px rgba(232,207,166);
+        border-radius: 10px;
+        display: none;
+        color: rgb(25, 31, 39);
+        font-weight: bold;
+    ">
+    
+    <div id="userInfo" style="display: none;">
+        <p id="username">ime</p>
+        <button id="logout" class="setbut">ODJAVI SE</button>
+        <p id="level">level</p>
+        <progress id="progres" value="0" max="100"> 0% </progress>
+    </div>
+        <div id="generalInfo">
+            <label style="margin-top: 10px;"for="level">Premdet:</label>
+            <select style="margin-top: 10px; margin-right: 10px;" id="subject" name="level" required>
+                <option value="1">Matematika</option>
+            </select>
+            <label for="level">Razred:</label>
+            <select id="grade" name="level" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="3">4</option>
+            </select>
+            <div id="category">
+            <p>Odaberi lekcije koje želiš vježbati i njihove težine (od 1 - 3):</p>
+            <hr size="5" color= "RGB(232,207,166)" style="background-color: rgba(232,207,166); border-color: rgb(227, 199, 154);">
+            <div style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div><button class="setbut" id="z">ZBRAJANJE</button> <input type="checkbox" id="z1" name="z" value="1"><input type="checkbox" id="z2" name="z" value="2"><input type="checkbox" id="z3" name="z" value="3"> <br>
+            </div>
+               <div> <button class="setbut"id="o">ODUZIMANJE</button> <input type="checkbox" id="o1" name="o" value="1"><input type="checkbox" id="o2" name="o" value="2"><input type="checkbox" id="o3" name="o" value="3"> <br>
+               </div>
+             <div> <button class="setbut"id="m">MNOŽENJE</button> <input type="checkbox" id="m1" name="m" value="1"><input type="checkbox" id="m2" name="m" value="2"><input type="checkbox" id="m3" name="m" value="3"> <br>
+             </div>  <div><button class="setbut" id="d">DJELJENJE</button> <input type="checkbox" id="d1" name="d" value="1"><input type="checkbox" id="d2" name="d" value="2"><input type="checkbox" id="d3" name="d" value="3"> <br>
+             </div>  <div><button class="setbut"id="r">RAZLOMCI</button> <input type="checkbox" id="r1" name="r" value="1"><input type="checkbox" id="r2" name="r" value="2"><input type="checkbox" id="r3" name="r" value="3"> <br>
+             </div>  <div><button class="setbut"id="p">POSTOTCI</button> <input type="checkbox" id="p1" name="p" value="1"><input type="checkbox" id="p2" name="p" value="2"><input type="checkbox" id="p3" name="p" value="3"> <br>
+             </div>  <div><button class="setbut"id="g">GEOMETRIJA</button> <input type="checkbox" id="g1" name="g" value="1"><input type="checkbox" id="g2" name="g" value="2"><input type="checkbox" id="g3" name="g" value="3"></div>
+            </div>
+        </div>
+            <hr size="5" color= "RGB(232,207,166)" style="background-color: rgba(232,207,166); border-color: rgb(227, 199, 154);">
+            <button id="submitTypes">Spremi postavke područja i težina!</button>
+
+        </div>
+    
+    </div>
+
+    <div id="cancle" style="
+        background-color: rgb(184, 121, 123);
+        position: absolute;
+        top: 3%;
+        left: 800;
+        right: 20;
+        height: 30;
+        display: none;
+        text-align: center;
+        padding: 2px
+    "> NAZAD U SVIJET</div>
+
+    <div id="question" style="    
+        background-color: rgb(224, 192, 87);
+        height: 45%;
+        position: absolute;
+        bottom: 250;
+        left: 580;
+        right: 20;
+        display: none;
+        border: 4px black solid">
+    <h1 id="question-text"style="
+        text-align: center;
+    ">Nema pitanja za odabranu kombinaciju tezina, kategorija i razreda</h1>
+    </div>
+
+    <div id="border" style="
+        height: 190;
+        position: absolute;
+        bottom: 50;
+        left: 580;
+        right: 20;
+        border: 4px black solid;
+        display: none;
+    ">
+    <div  id="resultBox" style="
+        position: absolute;
+        top: 0; right: 0; left: 0; bottom: 0;
+        background-color: aliceblue;
+        padding: 15px;
+        display: none;
+    "><p id="answerResult">tovno/netocno</p>  <p id="answerInfo"></p><p id="nextQuestion" style="border: 2px solid black; text-align: center;">dalje</p></div>
+    <div id="choseAnswer1" style="
+        height: 100%;
+        display: none;
+        grid-template-columns: 1fr 1fr; ">
+        <button class="ques" id="answ1">odgovor1</button>
+        <button class="ques" id="answ2">odgovor2</button>
+        <button class="ques" id="answ3">odgovor3</button>
+        <button class="ques" id="answ4">odgovor4</button>
+    </div>  
+    <div id="choseAnswer2" style="
+        height: 100%;
+        display: none;
+        grid-template-columns: 1fr 1fr;">
+        <button class="ques" id="answ1">tocno</button>
+        <button class="ques" id="answ2">netocno</button>
+    </div>  
+    <div id="choseAnswer3" style="
+        height: 100%;
+        display: none;
+        grid-template-columns: 1fr;">
+    <input type="text" id="answInput">
+    <button class="quesInput" id="answ">predaj</button>
+    </div> 
+    </div>
+
+    <div id="endBox"style="
+        position: absolute;
+        bottom: 50;
+        left: 580;
+        right: 20;
+        height: 470;
+        background-color: rgb(224, 192, 87);
+        display: none;
+        text-align: center;
+        border: 2px solid black;
+    ">
+    <p><h1>Pozdrav!</h1> bilo je zabavno!</p>
+    <h1 id="end" style="
+        border: 2px solid black;
+        margin: 5px;
+    ">NAZAD U SVIJET!</h1>
+    </div>
+
+    <div id="startBox"style="
+        position: absolute;
+        bottom: 50;
+        left: 580;
+        right: 20;
+        height: 80%;
+        background-color: rgb(224, 192, 87);
+        display: none;
+        text-align: center;
+        border: 2px solid black;
+    ">
+    <p><h1>PRAVILA</h1>
+    Ova igra se sastoji od tri tipa pitanja. <br>
+    ABCD pitalica - na postavljeno pitanje potrebno je prepoznati točan odgovor od 4 ponuđena <br>
+    Točno/Netočno - potrebno je odrediti je li izrećena tvrdnja točna ili netočna <br>
+    Slobodan unos - na pitanje je potrbno odgovoriti unosom sa tipkovnice <br>
+    <hr>
+    Za svaki točan odgovor bit ćeš nagrađen bodovima. Sretno!
+</p>
+    <h1 id="start" style="
+    border: 2px solid black;
+    margin: 5px;
+    ">KRENI!</h1>
+    </div>
+    
+<script src="data/npc.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js" integrity="sha512-6+YN/9o9BWrk6wSfGxQGpt3EUK6XeHi6yeHV+TYD2GR0Sj/cggRpXr1BrAQf0as6XslxomMUxXp2vIl+fv0QRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
+<script src="data/audio.js" ></script>
+<script src="data/zoneNovo.js"></script>
+<script src="data/collisionsNovo.js"></script>
+<script src="classes.js"></script>
+<script src="index.js"></script>
+<script src="zones.js"></script>
+<script src="sideBar.js"></script>
